@@ -11,6 +11,9 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * Created by Medhat on 14/12/2018.
  */
@@ -32,8 +35,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.viewho
     class viewholder extends RecyclerView.ViewHolder{
 
         ImageView img ;
+
         public viewholder(View itemView ,  final ListItemClickListener listener) {
             super(itemView);
+
             img = itemView.findViewById(R.id.img);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

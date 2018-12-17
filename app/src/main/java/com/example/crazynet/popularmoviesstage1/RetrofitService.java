@@ -2,11 +2,8 @@ package com.example.crazynet.popularmoviesstage1;
 
 
 import com.example.crazynet.popularmoviesstage1.model.Response;
-import com.example.crazynet.popularmoviesstage1.model.request;
 
-import io.reactivex.Single;
 import retrofit2.Call;
-import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 

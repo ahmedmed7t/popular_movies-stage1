@@ -24,6 +24,7 @@
         android:layout_marginTop="@dimen/ten"
         android:layout_marginLeft="@dimen/ten"
         android:layout_marginRight="@dimen/ten"
+        android:contentDescription="filmImage"
         android:scaleType="centerCrop"/>
 
     <TextView
