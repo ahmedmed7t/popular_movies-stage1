@@ -3,7 +3,7 @@ package com.example.crazynet.popularmoviesstage1.model;
 import java.util.List;
 import com.google.gson.annotations.SerializedName;
 
-public class ResultsItem{
+public class posterItem {
 
 	@SerializedName("overview")
 	private String overview;
@@ -162,7 +162,7 @@ public class ResultsItem{
 	@Override
  	public String toString(){
 		return 
-			"ResultsItem{" + 
+			"posterItem{" +
 			"overview = '" + overview + '\'' + 
 			",original_language = '" + originalLanguage + '\'' + 
 			",original_title = '" + originalTitle + '\'' + 

@@ -1,10 +1,13 @@
 package com.example.crazynet.popularmoviesstage1.model;
 
 import java.util.ArrayList;
-
+import java.util.List;
 import com.google.gson.annotations.SerializedName;
 
-public class Response{
+public class ReviewResponse{
+
+	@SerializedName("id")
+	private int id;
 
 	@SerializedName("page")
 	private int page;
@@ -13,10 +16,18 @@ public class Response{
 	private int totalPages;
 
 	@SerializedName("results")
-	private ArrayList<posterItem> results;
+	private ArrayList<reviewItem> results;
 
 	@SerializedName("total_results")
 	private int totalResults;
+
+	public void setId(int id){
+		this.id = id;
+	}
+
+	public int getId(){
+		return id;
+	}
 
 	public void setPage(int page){
 		this.page = page;
@@ -34,11 +45,11 @@ public class Response{
 		return totalPages;
 	}
 
-	public void setResults(ArrayList<posterItem> results){
+	public void setResults(ArrayList<reviewItem> results){
 		this.results = results;
 	}
 
-	public ArrayList<posterItem> getResults(){
+	public ArrayList<reviewItem> getResults(){
 		return results;
 	}
 
@@ -53,8 +64,9 @@ public class Response{
 	@Override
  	public String toString(){
 		return 
-			"Response{" + 
-			"page = '" + page + '\'' + 
+			"ReviewResponse{" + 
+			"id = '" + id + '\'' + 
+			",page = '" + page + '\'' + 
 			",total_pages = '" + totalPages + '\'' + 
 			",results = '" + results + '\'' + 
 			",total_results = '" + totalResults + '\'' + 

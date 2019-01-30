@@ -2,6 +2,8 @@ package com.example.crazynet.popularmoviesstage1;
 
 
 import com.example.crazynet.popularmoviesstage1.model.Response;
+import com.example.crazynet.popularmoviesstage1.model.ReviewResponse;
+import com.example.crazynet.popularmoviesstage1.model.VideoResponse;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -18,5 +20,10 @@ public interface RetrofitService {
      @GET("movie/{name}"+link)
      Call<Response> getPopular (@Path("name") String name);
 
+    @GET("movie/{id}/videos"+link)
+    Call<VideoResponse> getVideo (@Path("id") int id);
+
+    @GET("movie/{id}/reviews"+link)
+    Call<ReviewResponse> getReview (@Path("id") int id);
 
 }

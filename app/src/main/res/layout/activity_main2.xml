@@ -21,6 +21,7 @@
         android:src="@drawable/ic_launcher_background"
         app:layout_constraintTop_toBottomOf="@id/title"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/overView"
         android:layout_marginTop="@dimen/ten"
         android:layout_marginLeft="@dimen/ten"
         android:layout_marginRight="@dimen/ten"
@@ -45,6 +46,7 @@
         android:layout_marginEnd="@dimen/fiften"
         android:layout_marginRight="@dimen/fiften"
         android:layout_marginStart="@dimen/ten" />
+
     <TextView
         android:id="@+id/date"
         android:layout_width="wrap_content"
@@ -55,7 +57,10 @@
         app:layout_constraintStart_toEndOf="@id/image"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="@dimen/fiften"
+        android:layout_marginLeft="16dp"
         android:textSize="@dimen/font"/>
+
+
     <TextView
         android:id="@+id/rate"
         android:layout_width="wrap_content"
@@ -67,16 +72,83 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="@dimen/ten"
         android:textSize="@dimen/font"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/rate"
+        app:layout_constraintLeft_toRightOf="@id/image"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@color/buttonColor"
+        android:text="Add to favourate"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
     <TextView
         android:id="@+id/overView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/black"
         android:paddingLeft="4dp"
+        android:text="overView"
         app:layout_constraintTop_toBottomOf="@id/image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="@dimen/fiften"
-        android:layout_marginRight="@dimen/ten"/>
+        android:layout_marginRight="@dimen/ten"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/trailer_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/trailer"
+        app:layout_constraintTop_toBottomOf="@id/overView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginStart="16dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/trailer_label"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/review"
+        android:text="Reviews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/recycler"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/reviewRecycler"
+        app:layout_constraintTop_toBottomOf="@id/review"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="10dp">
+    </android.support.v7.widget.RecyclerView>
+
   </android.support.constraint.ConstraintLayout>
+
 </ScrollView>
